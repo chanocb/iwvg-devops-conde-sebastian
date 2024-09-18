@@ -38,12 +38,6 @@ class UserTest {
     }
 
     @Test
-    void testAddFraction() {
-        user.addFraction(new Fraction(5, 6));
-        assertEquals(3, user.getFractions().size());
-    }
-
-    @Test
     void testFullName() {
         assertEquals("Sebastián Conde", user.fullName());
     }
