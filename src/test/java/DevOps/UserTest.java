@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 class UserTest {
 
@@ -22,9 +23,9 @@ class UserTest {
     @Test
     void testUserDefaultConstructor() {
         user = new User();
-        assertEquals(null, user.getId());
-        assertEquals(null, user.getName());
-        assertEquals(null, user.getFamilyName());
+        assertNull(user.getId());
+        assertNull(user.getName());
+        assertNull(user.getFamilyName());
         assertEquals(0, user.getFractions().size());
     }
 
