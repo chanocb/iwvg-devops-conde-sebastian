@@ -3,7 +3,9 @@ package DevOps;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+
 import java.util.Arrays;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
@@ -57,5 +59,16 @@ class UserTest {
     void testSetFamilyName() {
         user.setFamilyName("Pérez");
         assertEquals("Pérez", user.getFamilyName());
+    }
+
+
+
+    @Test
+    void testSetFractions() {
+        List<Fraction> newFractions = Arrays.asList(new Fraction(7, 8), new Fraction(9, 10));
+        user.setFractions(newFractions);
+        assertEquals(2, user.getFractions().size());
+        assertEquals(new Fraction(7, 8).toString(), user.getFractions().get(0).toString());
+        assertEquals(new Fraction(9, 10).toString(), user.getFractions().get(1).toString());
     }
 }
