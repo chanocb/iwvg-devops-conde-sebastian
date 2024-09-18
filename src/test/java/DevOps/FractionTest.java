@@ -3,7 +3,7 @@ package DevOps;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 class FractionTest {
 
@@ -42,6 +42,45 @@ class FractionTest {
     void testSetDenominator() {
         fraction.setDenominator(6);
         assertEquals(6, fraction.getDenominator());
+    }
+    @Test
+    void testIsProper() {
+        assertTrue(fraction.isProper());
+    }
+
+    @Test
+    void testIsImproper() {
+        assertFalse(fraction.isImproper());
+    }
+
+    @Test
+    void testIsEquivalent() {
+        Fraction equivalentFraction = new Fraction(6, 8);
+        assertTrue(fraction.isEquivalent(equivalentFraction));
+    }
+
+    @Test
+    void testAdd() {
+        Fraction other = new Fraction(1, 4);
+        Fraction result = fraction.add(other); // 3/4 + 1/4 = 1
+        assertEquals(16, result.getNumerator());
+        assertEquals(16, result.getDenominator());
+    }
+
+    @Test
+    void testMultiply() {
+        Fraction other = new Fraction(2, 3);
+        Fraction result = fraction.multiply(other); // 3/4 * 2/3 = 6/12 = 1/2
+        assertEquals(6, result.getNumerator());
+        assertEquals(12, result.getDenominator());
+    }
+
+    @Test
+    void testDivide() {
+        Fraction other = new Fraction(2, 3);
+        Fraction result = fraction.divide(other); // 3/4 ÷ 2/3 = 3/4 * 3/2 = 9/8
+        assertEquals(9, result.getNumerator());
+        assertEquals(8, result.getDenominator());
     }
 
     @Test
