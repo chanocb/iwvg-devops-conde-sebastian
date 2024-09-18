@@ -3,3 +3,4 @@
 > Este proyecto es una Plantilla de apoyo docente de la asignatura.
 ## Estado del código 
 [![DevOps](https://github.com/chanocb/iwvg-devops-conde-sebastian/actions/workflows/test-sonar.yml/badge.svg?branch=develop)](https://github.com/chanocb/iwvg-devops-conde-sebastian/actions/workflows/test-sonar.yml)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=chanocb_iwvg-devops-conde-sebastian&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=chanocb_iwvg-devops-conde-sebastian)
