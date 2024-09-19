@@ -27,7 +27,7 @@ public class Searches {
         return new UsersDatabase().findAll()
                 .flatMap(user -> user.getFractions().stream()
                         .filter(fraction -> (fraction.getNumerator() < 0 && fraction.getDenominator() >=0) || (fraction.getDenominator() < 0 && fraction.getNumerator() > 0))
-                        .map(Fraction::decimal)
+                        .map(Fraction::decimal) //comentario para bug
                 );
     }
     public Stream<String> findUserFamilyNameByAllNegativeSignFractionDistinct() {
