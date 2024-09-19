@@ -19,4 +19,10 @@ public class SearchesTest {
         assertEquals(-1, fraction.getNumerator());
         assertEquals(5, fraction.getDenominator());
     }
+    @Test
+    void testFindUserIdBySomeProperFraction() {
+        assertEquals(List.of("1","2","3","5"),new Searches().findUserIdBySomeProperFraction()
+         .collect(Collectors.toList()));
+
+    }
 }
