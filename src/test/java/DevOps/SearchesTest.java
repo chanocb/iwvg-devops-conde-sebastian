@@ -29,9 +29,10 @@ public class SearchesTest {
     void testFindDecimalFractionByNegativeSignFraction() {
         assertEquals(List.of(-0.2, -0.5),new Searches().findDecimalFractionByNegativeSignFraction()
                 .collect(Collectors.toList()));
-
-
-
-
+    }
+    @Test
+    void testFindUserFamilyNameByAllNegativeSignFractionDistinct() {
+        assertEquals(List.of(),new Searches().findUserFamilyNameByAllNegativeSignFractionDistinct()
+                .collect(Collectors.toList()));
     }
 }
